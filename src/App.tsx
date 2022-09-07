@@ -1,6 +1,6 @@
 import React, { createContext, useEffect, useState } from 'react'
 import './index.scss'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 import UsersList from './pages/UsersList'
 import CurrentUser from './pages/CurrentUser'
 import UsersServices from './services/users.services'
@@ -57,8 +57,10 @@ const App: React.FC = () => {
                 <h1 className='main_title'>GitHub searcher</h1>
 
                 <Routes>
-                    <Route path="/" element={<UsersList/>}/>
-                    <Route path="/:userId" element={<CurrentUser/>}/>
+                    <Route path="/atlana" element={<UsersList/>}/>
+                    <Route path="/atlana/:userId" element={<CurrentUser/>}/>
+
+                    <Route path='/' element={ <Navigate replace to='/atlana'/> }/>
                 </Routes>
             </div>
         </AppContext.Provider>
