@@ -1,0 +1,22 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.userCard {
+    @include card;
+
+    &:hover {
+        box-shadow: $shadow-input;
+    }
+
+    &_img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50px;
+        object-fit: contain;
+    }
+
+    &_repoContainer {
+        margin-left: auto;
+        width: 100px;
+    }
+}

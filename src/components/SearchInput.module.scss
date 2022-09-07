@@ -1,0 +1,26 @@
+@import "src/styles/variables";
+
+.searchInput {
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: 1px solid $color-beige;
+    background-color:$color-cream-light;
+    outline: none;
+    margin-bottom: 20px;
+    font-size: 18px;
+
+    &::placeholder {
+        font-size: 18px;
+    }
+
+    &:hover {
+        box-shadow: $shadow-input;
+    }
+
+    &:focus {
+        border-color: $color-brown;
+        box-shadow: $shadow-input;
+    }
+}
+

@@ -1,0 +1,23 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+.repoCard {
+    @include card;
+    justify-content: space-between;
+
+    p {
+        font-size: 22px;
+        font-weight: bold;
+        color: $color-brown-strong;
+    }
+
+    &_counter {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        span {
+            text-align: right;
+        }
+    }
+}

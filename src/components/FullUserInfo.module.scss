@@ -1,0 +1,25 @@
+@import "src/styles/variables";
+
+.userDashboard {
+    width: 600px;
+
+    img {
+        width: 250px;
+        height: 250px;
+        object-fit: contain;
+    }
+
+    &_top {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    &_bio {
+        max-height: 70px;
+        overflow: auto;
+    }
+
+}
