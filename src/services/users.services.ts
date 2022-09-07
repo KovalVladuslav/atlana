@@ -5,8 +5,6 @@ interface ISearchedUsers {
     items: IUser[]
 }
 
-axios.defaults.headers.common["Authorization"] = `Bearer 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`
-
 class UsersServices {
     static getUser(id:number | string) {
         return axios.get(`https://api.github.com/user/${id}`)
